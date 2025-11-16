@@ -1,0 +1,133 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.header {
+  width: 100%;
+
+  background-color: $secondarycolor;
+  display: flex;
+  justify-content: center;
+  padding: 16px 220px 16px 220px;
+
+  &__inner {
+    width: 100%;
+    max-width: 1920px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+
+    img {
+      width: 37px;
+      height: 26px;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 28px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    &-list {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+    &-icons {
+      width: 30px;
+      height: 24px;
+      display: block;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    gap: 24px;
+
+    .header__btn-login {
+      width: 126px;
+      height: 60px;
+      border-radius: $btnradius;
+      color: $secondarycolor;
+      background: #ffe492;
+      font-weight: 500;
+      font-size: $fontSize;
+      cursor: pointer;
+    }
+  }
+  &__menu {
+    display: none;
+  }
+}
+
+@include media-down(xxl) {
+  .header {
+    padding: 16px 32px;
+  }
+}
+@include media-down(xl) {
+  .header {
+    max-width: 1480px;
+    padding: 16px 32px;
+  }
+}
+@include media-down(mlg) {
+  .header {
+    padding: 16px 32px 16px 32px;
+    &__inner {
+      max-width: 1125px;
+
+      .header__nav-list {
+        display: none;
+      }
+    }
+    &__menu {
+      display: block;
+    }
+  }
+}
+@include media-down(lg) {
+  .header {
+    padding: 16px 32px 16px 32px;
+    &__inner {
+      max-width: 1088px;
+
+      .header__nav-list {
+        display: none;
+      }
+    }
+    &__menu {
+      display: block;
+    }
+  }
+}
+@include media-down(mdlg) {
+  .header {
+    &__btns {
+      display: none;
+    }
+    &__menu {
+      display: block;
+    }
+  }
+}

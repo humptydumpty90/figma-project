@@ -1,0 +1,100 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.trial {
+  background-color: $secondarycolor;
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+  height: auto;
+  padding: 140px 220px 32px 220px;
+
+  &__heading {
+    width: 608px;
+    text-align: center;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: $H1FontSize;
+    color: white;
+  }
+  &__text {
+    font-size: $ParagraphP1RegularFonteSize;
+    color: white;
+    margin-top: 24px;
+  }
+  &__text2 {
+    font-size: $ParagraphP1RegularFonteSize;
+    color: white;
+  }
+
+  &__imgs {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+@include media-down(mdlg) {
+  .trial {
+    justify-content: flex-start;
+    padding: 140px 20px 32px 20px;
+
+    p {
+      font-size: 24px;
+    }
+    &__heading {
+      width: 100%;
+      max-width: 608px;
+      text-align: left;
+      align-items: flex-start;
+    }
+    &__title {
+      font-weight: 700;
+      font-size: 54px;
+      color: white;
+    }
+  }
+}
+@include media-down(sm) {
+  .trial {
+    padding: 100px 16px 32px 16px;
+
+    &__title {
+      font-size: 36px;
+      line-height: $H4LineHeight;
+    }
+    p {
+      font-size: 18px;
+    }
+
+    button {
+      width: 232px;
+    }
+
+    &__imgs {
+      gap: 20px;
+      display: flex;
+      gap: 40px;
+      img:nth-child(1) {
+        width: 28px;
+        height: 36px;
+      }
+
+      img:nth-child(2) {
+        width: 35px;
+        height: 36px;
+      }
+
+      img:nth-child(3) {
+        width: 29px;
+        height: 36px;
+      }
+    }
+  }
+}

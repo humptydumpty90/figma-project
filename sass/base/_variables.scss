@@ -1,0 +1,78 @@
+/*
+** Default
+*/
+$fontSize: 18px;
+$lineHeight: 1.66667;
+$letterspacing: -0.32px;
+
+/*
+** Header
+*/
+/* Fonte Size */
+$H1FontSize: 72px;
+$H2FontSize: 64px;
+$H3FontSize: 48px;
+$H4FontSize: 36px;
+$H5FontSize: 24px;
+/* Line Hegiht */
+$H1LineHeight: auto;
+$H2LineHeight: auto;
+$H3LineHeight: auto;
+$H4LineHeight: 1.2;
+$H5LineHeight: 2;
+
+/*
+** Paragraph P1
+*/
+/* Fonte Size */
+$ParagraphP1SemiBoldFonteSize: 24px;
+$ParagraphP1RegularFonteSize: 24px;
+/* Line Hegiht */
+$ParagraphP1SemiBoldLineHeight: 36px;
+$ParagraphP1RegularLineHeight: 32px;
+
+/*
+** Paragraph P2
+*/
+/* Fonte Size */
+$ParagraphP2BoldFonteSize: 16px;
+$ParagraphP2MediumFonteSize: 16px;
+$ParagraphP2RegularFonteSize: $fontSize;
+/* Line Hegiht */
+$ParagraphP2BoldLineHeight: auto;
+$ParagraphP2MediumLineHeight: 1, 277777778;
+$ParagraphP2RegularLineHeight: $lineHeight;
+
+/*
+** Paragraph P3
+*/
+/* Fonte Size */
+$ParagraphP3MediumFonteSize: 14px;
+$ParagraphP3RegularFonteSize: 14px;
+/* Line Hegiht */
+$ParagraphP3MediumLineHeight: auto;
+$ParagraphP3RegularLineHeight: 1, 111111111;
+
+/*
+** Breakpoints
+*/
+$breakpoints: (
+  xs: 0,
+  sm: 320px,
+  smmd: 500px,
+  md: 768px,
+  mdlg: 992px,
+  lg: 1152px,
+  mlg: 1356px,
+  xl: 1480px,
+  xxl: 1690px,
+);
+
+/* Colors */
+
+$secondarycolor: #043873;
+$secondarytextcolor: #212529;
+
+/* Buttons */
+$buttoncolor: #4f9cf9;
+$btnradius: 8px;

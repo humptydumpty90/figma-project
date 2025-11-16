@@ -1,0 +1,14 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+html {
+  font-size: $fontSize;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: $lineHeight;
+  letter-spacing: $letterspacing;
+  background-color: white;
+}
+
+button {
+  @include button;
+}

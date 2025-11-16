@@ -1,0 +1,179 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.apps {
+  @include section-container(140px, 220px);
+  background-color: $secondarycolor;
+
+  &__element {
+    position: absolute;
+    z-index: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.5;
+    }
+  }
+
+  &__headline {
+    @include section-headline(100px, true);
+  }
+
+  &__block {
+    width: 798px;
+
+    &-title {
+      font-size: $H1FontSize;
+      color: white;
+      font-weight: 700;
+      line-height: 100px;
+    }
+
+    &-text {
+      font-size: $ParagraphP2RegularFonteSize;
+      color: white;
+      margin-top: 24px;
+    }
+
+    &-btn-container {
+      margin-top: 60px;
+    }
+  }
+  &__img-container {
+    width: 582px;
+    height: 470px;
+  }
+}
+
+@include media-down(xl) {
+  .apps {
+    padding: 100px 32px 100px 32px;
+
+    &__content {
+      max-width: 1336px;
+    }
+    &__img-container {
+      width: 686px;
+      height: 504px;
+    }
+  }
+}
+
+@include media-down(mlg) {
+  .apps {
+    padding: 140px 32px 140px 32px;
+    &__content {
+      width: 1125px;
+    }
+    &__block {
+      width: 651px;
+    }
+
+    &__img-container {
+      width: 600px;
+      height: 400px;
+    }
+  }
+}
+
+@include media-down(lg) {
+  .apps {
+    padding: 140px 32px 140px 32px;
+    &__content {
+      max-width: 1088px;
+      width: 100%;
+    }
+    &__block {
+      width: 100%;
+      max-width: 470px;
+
+      &-title {
+        font-size: $H2FontSize;
+      }
+    }
+
+    &__img-container {
+      width: 526px;
+      height: 427px;
+      img {
+        width: 528px;
+        height: 427px;
+      }
+    }
+  }
+}
+@include media-down(mdlg) {
+  .apps {
+    padding: 100px 32px 100px 32px;
+    &__content {
+      width: 100%;
+      max-width: 768px;
+    }
+    &__headline {
+      gap: 50px;
+      flex-direction: column-reverse;
+    }
+    &__block {
+      width: 100%;
+      max-width: 768px;
+      margin: 0 auto;
+      text-align: center;
+      &-title {
+        font-size: $H2FontSize;
+      }
+    }
+    &__element {
+      height: 50%;
+    }
+
+    &__img-container {
+      width: 485px;
+      height: 392px;
+      img {
+        width: 485px;
+        height: 392px;
+      }
+    }
+  }
+}
+
+@include media-down(smmd) {
+  .apps {
+    padding: 80px 14px 60px 14px;
+
+    &__headline {
+      gap: 100px;
+    }
+
+    &__block {
+      max-width: 100%;
+      &-title {
+        font-size: $H3FontSize;
+      }
+    }
+
+    &__img-container {
+      max-width: 286px;
+      height: 191px;
+      img {
+        width: 286px;
+        height: 231px;
+      }
+    }
+  }
+}
+@include media-down(sm) {
+  .apps {
+    &__block {
+      &-title {
+        font-size: 36px;
+        line-height: $H4LineHeight;
+      }
+    }
+    button {
+      width: 193px;
+    }
+  }
+}
